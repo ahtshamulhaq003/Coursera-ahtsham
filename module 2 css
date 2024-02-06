@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif; /* Optional: set a font family */
+  }
+
+  /* Apply box-sizing to all elements */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Reset margins and paddings */
+  body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Set font size for headings and section titles */
+  h1 {
+    font-size: 150%; 
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 125%; 
+  }
+
+  /* Container for sections */
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  /* Style for sections */
+  .section {
+    float: left;
+    width: 33.33%; /* Equal width for desktop view */
+    background-color: #f2f2f2; /* Set background color */
+    border: 1px solid black; /* Add 1px black border */
+    margin-bottom: 20px; /* Add vertical spacing */
+    position: relative; /* Relative positioning for section title */
+  }
+
+  /* Style for section title */
+  .section h2 {
+    position: relative; /* Absolute positioning for section title */
+    width: 100px;
+    padding: 5px 10px; /* Add padding */
+    border: 1px solid black; /* Add 1px black border */
+    font-size: inherit; /* Inherit font size */
+  }
+
+  /* Media queries for tablet view */
+  @media only screen and (max-width: 991px) {
+    .section {
+      width: 50%; /* 2 sections side by side */
+    }
+
+    .section:nth-child(3) {
+      clear: both; /* Start new row for the third section */
+    }
+  }
+
+  /* Media queries for mobile view */
+  @media only screen and (max-width: 767px) {
+    .section {
+      width: 100%; /* Full width for each section */
+    }
+  }
